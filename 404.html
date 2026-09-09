@@ -5,7 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Not found — Berkay Ay</title>
   <meta name="robots" content="noindex">
-  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <script>
+    // Resolve relative asset paths from the site root, also under a GitHub Pages sub-path.
+    (function () {
+      var b = document.createElement("base"), p = location.pathname.split("/");
+      b.href = (/github\.io$/.test(location.hostname) && p[1]) ? "/" + p[1] + "/" : "/";
+      document.head.appendChild(b);
+    })();
+  </script>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <script>
     (function () {
       try {
@@ -19,16 +27,16 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif:ital@1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/css/site.css">
+  <link rel="stylesheet" href="assets/css/site.css">
 </head>
 <body data-page="404">
   <main class="wrap nf">
     <h1>404</h1>
     <p data-i18n="nf.title">This page is not installed.</p>
     <p class="muted" data-i18n="nf.text">Nothing lives at this address. Try the index.</p>
-    <p><a class="btn btn--primary" href="/"><span data-i18n="nf.cta">Back home</span></a></p>
+    <p><a class="btn btn--primary" href="index.html"><span data-i18n="nf.cta">Back home</span></a></p>
   </main>
-  <script src="/assets/js/data.js"></script>
-  <script src="/assets/js/site.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/site.js"></script>
 </body>
 </html>

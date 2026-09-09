@@ -24,8 +24,9 @@ python3 -m http.server 8080
 
 ## Deploy
 
-Static. Drop it on Vercel, Netlify, Cloudflare Pages or GitHub Pages.
-`vercel.json` turns on clean URLs (`/projects`) and long cache for assets.
+Static. A GitHub Actions workflow (`.github/workflows/pages.yml`) publishes
+the repository to GitHub Pages on every push. It also runs as-is on Vercel,
+Netlify or Cloudflare Pages; `vercel.json` adds clean URLs and asset caching.
 
 ## Editing content
 
