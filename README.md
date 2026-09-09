@@ -10,7 +10,7 @@ projects.html       the work
 404.html            not found
 assets/css/site.css design system (dark + light, tokens at the top)
 assets/js/data.js   all content: projects + EN/TR strings — edit this
-assets/js/site.js   behaviour: cursor, dot field, reveals, i18n, theme
+assets/js/site.js   behaviour: i18n, theme, clock, project lists
 assets/img/         portrait (WebP) and favicon
 ```
 
