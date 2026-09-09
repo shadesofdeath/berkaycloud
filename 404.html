@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Not found — Berkay Ay</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("theme"); if (t) document.documentElement.setAttribute("data-theme", t);
+        var l = localStorage.getItem("lang");
+        if (!l) l = ((navigator.language || "").toLowerCase().indexOf("tr") === 0) ? "tr" : "en";
+        document.documentElement.lang = l;
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/site.css">
+</head>
+<body data-page="404">
+  <div class="cursor" id="cursor" aria-hidden="true"><span class="cursor__ring"><i></i></span><span class="cursor__dot"><i></i></span></div>
+  <main class="notfound">
+    <h1>0x404</h1>
+    <p class="lede" data-i18n="nf.title">This page is not installed.</p>
+    <p class="mono" data-i18n="nf.text">Nothing lives at this address. Try the index.</p>
+    <p><a class="btn btn--solid" href="/"><span data-i18n="nf.cta">Back to index</span></a></p>
+  </main>
+  <script src="/assets/js/data.js"></script>
+  <script src="/assets/js/site.js"></script>
+</body>
+</html>
