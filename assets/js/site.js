@@ -117,9 +117,9 @@
         art.style.setProperty("--d", (i * 70) + "ms");
         art.innerHTML =
           '<div class="project__meta">' +
-            "<span>" + pad(i + 1) + "</span>" +
-            "<span>" + t("projects.version") + " <b>" + p.version + "</b></span>" +
-            "<span>" + t("projects.license") + " <b>" + p.license + "</b></span>" +
+            '<span class="mono">' + pad(i + 1) + " / " + pad(SITE.projects.length) + "</span>" +
+            '<span class="mono">' + t("projects.version") + " <b>" + p.version + "</b></span>" +
+            '<span class="mono">' + t("projects.license") + " <b>" + p.license + "</b></span>" +
           "</div>" +
           '<div class="project__head">' +
             "<h2>" + p.name + "</h2>" +
@@ -127,7 +127,7 @@
           "</div>" +
           '<div class="project__body">' +
             '<p class="project__desc">' + p.short[lang] + "</p>" +
-            '<div class="project__stack">' + p.stack.map(function (x) { return '<span class="chip">' + x + "</span>"; }).join("") + "</div>" +
+            '<div class="chips">' + p.stack.map(function (x) { return '<span class="chip">' + x + "</span>"; }).join("") + "</div>" +
           "</div>" +
           '<div class="project__links">' +
             '<a class="btn btn--solid" href="' + p.repo + '" target="_blank" rel="noopener">' + t("projects.github") + arrow + "</a>" +
@@ -280,6 +280,11 @@
     }
     if (reduced) { running = false; frame(t0); running = false; } else { requestAnimationFrame(frame); }
   }
+
+  /* ---------- grid overlay ---------- */
+  document.querySelectorAll(".gridlines").forEach(function (g) {
+    for (var i = 0; i < 12; i++) g.appendChild(document.createElement("span"));
+  });
 
   /* ---------- boot ---------- */
   applyLang();
